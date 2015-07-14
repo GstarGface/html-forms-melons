@@ -5,9 +5,11 @@
         <title>Ubermelon Order Form</title>
     </head>
     <body bgcolor="#D1FFD1">
-        <center><h2 style="font-family: 'Chewy', cursive;">IT'S...</h2>
-        <img height="250" src="http://www.thelogomix.com/files/imagecache/v3-logo-detail/melon-time.jpg"><center>
+        <center>
+            <h2 style="font-family: 'Chewy', cursive;">IT'S...</h2>
+        <img height="250" src="http://www.thelogomix.com/files/imagecache/v3-logo-detail/melon-time.jpg">
         <h1 style="font-family: 'Chewy', cursive"> Order your melons!!!!</h1>
+        <br>
 
         <h3 style="font-family: 'Poiret One', cursive">Price List</h3>
         <table style="font-family: 'Poiret One', cursive">
@@ -40,62 +42,73 @@
                 </tr>
             </tbody>
         </table>
-        <p style="font-family: 'Chewy', cursive"> 
+            <p style="font-family: 'Chewy', cursive"> 
             Place your orders here! You know you want to.
-        </p>
-        <form style="font-family: 'Poiret One', cursive" action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
-            <label>First Name:
-                <input type="text" name="firstname" required>
-            </label>
-            <label>Last Name:
-                <input type="text" name="lastname" required>
-            </label>
-            <br>
-            <br>
-        
-            Melon Type:
-                <select name="melontype" required>
-                    <option value="None"> Select..</option>
-                    <option value="watermelon">Watermelon</option>
-                    <option value="honeydew">Honeydew</option>
-                    <option value="cantelope">Cantelope</option>
-                    <option value="crenshaw">Crenshaw</option>
-                    <option value="canary">Canary</option>
-                </select> 
-            <label>*Quantity:
-                <input type="text" name="quantity" required>
-            </label>
-            <br>
-            <br>
-            <label>Delivery Time:
-                <input type="radio" name="time" value="am"> AM
-                <input type="radio" name="time" value="pm"> PM
-                <input type="radio" name="time" value="wat"> Whatever! 
-            </label>
-            <br>
-            <label>
-                Delivery Date: <input type="date" name="deliverydate"> 
-            </label>
-            <br>
-            <br>
-            <label> Returning Customer? 
-                <input type="radio" name="return" value="yes">Yes!
-                <input type="radio" name="return" value="no">Nope 
-            </label>
-            <br>
-            <label><i>Optional (for statistical purposes)</i>: How do you identify yourself?<br>
-                <input type="checkbox" name="animal" value="dog">Dog
-                <input type="checkbox" name="animal" value="cat">Cat
-                <input type="checkbox" name="animal" value="frog">Frog
-                <input type="checkbox" name="animal" value="bunny">Bunny
-            </label>
-            <footer style="font-family: 'Poiret One', cursive"><i>*Quantities given are by the flat.</i></footer>
-            <br>
-            <br>
-            <p style="font-family: 'Chewy', cursive" >
-                <b>Ready to submit?</b></p>
-                <input type="submit" value="No backsies">
+            </p>
+            <form style="font-family: 'Poiret One', cursive" action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+                <label>First Name:
+                    <input type="text" name="firstname" required>
+                </label>
+                <label>Last Name:
+                    <input type="text" name="lastname" required>
+                </label>
+                <br>
+                <br>
+                <label>Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>Phone:
+                    <input type="tel" name="phonenumber" required>
+                </label>
+                <br>
+                <br>
+            
+                Melon Type:
+                    <select name="melontype" required>
+                        <option value="None"> Select..</option>
+                        <option value="watermelon">Watermelon</option>
+                        <option value="honeydew">Honeydew</option>
+                        <option value="cantelope">Cantelope</option>
+                        <option value="crenshaw">Crenshaw</option>
+                        <option value="canary">Canary</option>
+                    </select> 
+                <label>*Quantity:
+                    <input type="text" name="quantity" required>
+                </label>
+                <br>
+                <br>
+                <label>Delivery Time:
+                    <input type="radio" name="time" checked value="am"> AM
+                    <input type="radio" name="time" value="pm"> PM
+                    <input type="radio" name="time" value="wat"> Whatever! 
+                </label>
+                <br>
+                <label>
+                    Delivery Date: <input type="date" name="deliverydate"> 
+                </label>
+                <br>
+                <br>
+                <textarea rows="4" cols="60" name="extrainfo">Anything else you want us to know... </textarea>
+                <br>
+                <br>
+                <label> Returning Customer? 
+                    <input type="radio" name="return" value="yes">Yes!
+                    <input type="radio" name="return" value="no">Nope 
+                </label>
+                <br>
+                <label><i>Optional (for statistical purposes)</i>: How do you identify yourself?<br>
+                    <input type="checkbox" name="animal" value="dog">Dog
+                    <input type="checkbox" name="animal" value="cat">Cat
+                    <input type="checkbox" name="animal" value="frog">Frog
+                    <input type="checkbox" name="animal" value="bunny">Bunny
+                </label>
+                <footer style="font-family: 'Poiret One', cursive"><i>*Quantities given are by the flat.</i></footer>
+                <br>
+                <br>
+                <p style="font-family: 'Chewy', cursive" >
+                    <b>Ready to submit?</b></p>
+                    <input type="submit" value="No backsies" name="submit">
         </form>
-        
+    </center>
     </body>
 </html>
